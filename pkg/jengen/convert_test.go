@@ -2,9 +2,10 @@ package jengen
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/dave/jennifer/jen"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestConvert(t *testing.T) {

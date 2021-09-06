@@ -1,0 +1,8 @@
+POST https://functions.yandexcloud.net/d4eibao4k3sldaho1opd
+Content-Type: application/json
+
+{
+  "Code": "package a\n\nfunc hello(arg string) {\n\tfmt.Println(\"Hello\", arg)\t\t\n}"
+}
+
+###

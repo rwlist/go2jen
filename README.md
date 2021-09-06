@@ -8,9 +8,9 @@ short time.
 
 ## TODO
 
-- [ ] Implement Yandex.Cloud function for code conversion
-- [ ] Deploy this in YCloud
-- [ ] Test deployment
+- [X] Implement Yandex.Cloud function for code conversion
+- [X] Deploy this in YCloud
+- [X] Test deployment
 - [ ] Implement simple frontend with convert button
 - [ ] Deploy frontend on GitHub / somewhere else
 - [ ] Test everything
