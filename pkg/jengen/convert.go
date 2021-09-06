@@ -3,9 +3,10 @@ package jengen
 import (
 	"bytes"
 	"fmt"
+	"go/format"
+
 	"github.com/aloder/tojen/gen"
 	"github.com/aloder/tojen/run"
-	"go/format"
 )
 
 var ErrGeneratedCodeNotMatch = fmt.Errorf("generated code differs from source")
@@ -22,7 +23,7 @@ func Convert(goCode []byte) ([]byte, error) {
 	return jenCode, nil
 }
 
-func Validate(goCode []byte, jenCode []byte) ([]byte, error) {
+func Validate(goCode, jenCode []byte) ([]byte, error) {
 	goCode, err := format.Source(goCode)
 	if err != nil {
 		return nil, err

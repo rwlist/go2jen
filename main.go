@@ -2,8 +2,9 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/rwlist/go2jen/pkg/jengen"
 	"net/http"
+
+	"github.com/rwlist/go2jen/pkg/jengen"
 )
 
 type Request struct {
