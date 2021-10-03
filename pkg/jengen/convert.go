@@ -20,7 +20,7 @@ func Convert(goCode []byte) ([]byte, error) {
 	}
 
 	jenCode := resultB.Bytes()
-	return jenCode, nil
+	return JenFormat(jenCode)
 }
 
 func Validate(goCode, jenCode []byte) ([]byte, error) {
