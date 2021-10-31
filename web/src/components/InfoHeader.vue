@@ -9,17 +9,12 @@
         target="_blank"
         rel="noopener"
       >dave/jennifer repo</a> for code generation.
+      Here's our <a
+        href="https://github.com/rwlist/go2jen"
+        target="_blank"
+        rel="noopener"
+      >GitHub</a>.
     </p>
-    <h3>Some links</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/rwlist/go2jen"
-          target="_blank"
-          rel="noopener"
-        >GitHub</a>
-      </li>
-    </ul>
   </div>
 </template>
 

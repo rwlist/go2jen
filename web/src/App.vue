@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Go2Jen from './components/Go2Jen.vue'
+import Go2Jen from './views/Go2Jen.vue'
 
 export default defineComponent({
   name: 'App',
