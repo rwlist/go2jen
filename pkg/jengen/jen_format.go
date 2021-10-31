@@ -2,6 +2,7 @@ package jengen
 
 import (
 	"bytes"
+
 	"github.com/dave/dst"
 	"github.com/dave/dst/decorator"
 )
