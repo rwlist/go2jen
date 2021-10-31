@@ -10,6 +10,20 @@ type walker struct {
 	prev dst.Node
 }
 
+func (w *walker) shouldIndent(expr *dst.CallExpr) bool {
+	if len(expr.Args) > 1 {
+		return true
+	}
+
+	if sel, ok := expr.Fun.(*dst.SelectorExpr); ok {
+		if sel.Sel.Name == "Block" {
+			return true
+		}
+	}
+
+	return false
+}
+
 func (w *walker) Visit(node dst.Node) dst.Visitor {
 	if node == nil {
 		return w
@@ -19,8 +33,8 @@ func (w *walker) Visit(node dst.Node) dst.Visitor {
 
 	switch n := node.(type) {
 	case *dst.CallExpr:
-		if len(n.Args) > 1 {
-			w.identArgs(n.Args)
+		if w.shouldIndent(n) {
+			w.indentArgs(n.Args)
 		}
 	}
 
@@ -28,7 +42,7 @@ func (w *walker) Visit(node dst.Node) dst.Visitor {
 	return w
 }
 
-func (w walker) identArgs(args []dst.Expr) {
+func (w *walker) indentArgs(args []dst.Expr) {
 	for _, arg := range args {
 		arg.Decorations().Before = dst.NewLine
 		arg.Decorations().After = dst.NewLine
